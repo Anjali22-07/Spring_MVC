@@ -35,14 +35,14 @@ A simple Java web application built using **Spring MVC** following the **Model-V
    git clone https://github.com/your-username/spring-mvc-project.git
 2. Navigate to the project folder:
     ```bash
-    cd spring-mvc-project
+   cd spring-mvc-project
 3. Build the project with Maven:
     ```bash
-      mvn clean install
+   mvn clean install
 4. Deploy the generated .war file to Tomcat’s webapps folder.
 5. Start the server and access the app at:
     ```bash
-    http://localhost:8080/spring_MVC
+   http://localhost:8080/spring_MVC
 
 ###  📖 Learning Outcomes
 
