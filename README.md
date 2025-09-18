@@ -4,6 +4,10 @@ A simple Java web application built using **Spring MVC** following the **Model-V
 
 ---
 
+## Working of Spring MVC 
+<img src="![Uploading Screenshot (230).png…]()
+"/>
+
 ## 📌 Features
 - Request handling with `@Controller` and `@RequestMapping`
 - Form submission and validation
