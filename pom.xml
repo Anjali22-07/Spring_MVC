@@ -8,7 +8,26 @@
   <name>Spring_MVC Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-  <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+		  
+				<dependency>
+		    <groupId>jakarta.servlet.jsp.jstl</groupId>
+		    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+		    <version>2.0.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.glassfish.web</groupId>
+		    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+		    <version>2.0.0</version>
+		</dependency>
+		
+					<dependency>
+			    <groupId>javax.servlet</groupId>
+			    <artifactId>jstl</artifactId>
+			    <version>1.2</version>
+			</dependency>
+
+		  <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-webmvc</artifactId>
