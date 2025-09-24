@@ -11,9 +11,9 @@
 <script>
 alert("User Registered Successfully");
 </script>
-<h1>welcome ${username}</h1>
-<h1>Your email is ${email}</h1>
-<h1>Your password is ${password}, Try to secure it!</h1>
+<h1>welcome ${user.userName}</h1>
+<h1>Your email is ${user.email}</h1>
+<h1>Your password is ${user.password}, Try to secure it!</h1>
 
 
 </body>
