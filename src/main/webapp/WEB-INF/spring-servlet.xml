@@ -13,7 +13,8 @@
             
             <context:component-scan base-package="springmvc.controller"></context:component-scan>
             
-            <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver " name="ViewResolver">
+            
+            <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" name="ViewResolver">
             <property name="prefix" value="/WEB-INF/View/"/>
             <property name="suffix" value=".jsp"/>
             </bean>
