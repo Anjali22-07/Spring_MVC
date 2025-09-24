@@ -11,6 +11,10 @@
 <script>
 alert("User Registered Successfully");
 </script>
+
+ <h1 class="text-center">${Header }</h1>
+    <p class="text-center">${Desc} </p>
+    <hr>
 <h1>welcome ${user.userName}</h1>
 <h1>Your email is ${user.email}</h1>
 <h1>Your password is ${user.password}, Try to secure it!</h1>

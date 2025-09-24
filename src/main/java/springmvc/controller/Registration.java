@@ -2,13 +2,21 @@ package springmvc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import springmvc.model.User;
 
 @Controller
 public class Registration {
+	
+	
+	@ModelAttribute
+	public void addCommonData(Model m) {
+		
+		m.addAttribute("Header", "Form Handling using Spring MVC");
+		m.addAttribute("Desc", "ModelAttribute reduces the boilerplate");
+	}
 
 	@RequestMapping("/Register")
 	public String showForm() {
@@ -17,25 +25,13 @@ public class Registration {
 	}
 	
 	@RequestMapping(path="/processForm", method=RequestMethod.POST)
-	public String handleForm(@RequestParam("email") String email,
-			@RequestParam("userName") String username,
-			@RequestParam("userPassword") String password, Model model) {
+	public String handleForm(@ModelAttribute User user, Model model) {
+		 
+		//@ModelAttribute bind the data from form to the object of class User 
 		
-//		System.out.println("email"+email);
-//		System.out.println("UserName:"+username);
-//		System.out.println("Password:"+password);
+		System.out.println(user);
 		
-		//instead of writing each time we can map the values with the User class
-		
-		   User user= new User();
-		   user.setEmail(email);
-		   user.setUserName(username);
-		   user.setPassword(password);
-		   
-	
-		//sending data to view
-		
-		model.addAttribute("user",user);
+		//can create a service layer for the logic 
 		return "Success";	
 		}
 }
