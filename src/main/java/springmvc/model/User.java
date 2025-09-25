@@ -1,9 +1,14 @@
 package springmvc.model;
 
+import jakarta.persistence.*;
+
+@Entity
 public class User {
 	
 	//the variable's name  should be same as the name of the fields in the form 
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 	private String email;
 	private String userName;
 	private String password;

@@ -3,7 +3,7 @@ package springmvc.controller;
 import java.time.LocalDateTime;
 import java.util.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
+/*import org.springframework.beans.factory.annotation.Autowired;*/
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
 	
-	@Autowired
-	private HomeService homeservice;
+	/*
+	 * @Autowired private HomeService homeservice;
+	 */
 	
 	@RequestMapping("/home")
 	public String home(Model model){
@@ -24,7 +25,11 @@ public class HomeController {
 		model.addAttribute("name","Anjali Singh");
 		
 		//to send a list of data
-		List<String> friend = homeservice.getFriends();
+		List<String> friend =new ArrayList<>();
+		friend.add("Sneha");
+		 friend.add("Tanvi"); 
+		 friend.add("Keshav"); 
+		 friend.add("Yashasvee");
 		model.addAttribute("f",friend);
 		return "index";
 		
