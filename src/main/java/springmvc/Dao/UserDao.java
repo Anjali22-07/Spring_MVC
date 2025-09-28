@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import springmvc.model.Form;
 import springmvc.model.User;
 
 @Repository      //this annotation ensures spring about this class being the database layer
@@ -26,6 +27,14 @@ public class UserDao {
 		
 		  //id- entity of the object is created
 		return user;
+	}
+	
+	
+	public Form saveForm(Form form) {
+		
+		entityManager.persist(form);
+		
+		return form;
 	}
 	
 

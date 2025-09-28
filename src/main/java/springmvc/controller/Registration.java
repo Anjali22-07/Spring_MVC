@@ -37,11 +37,16 @@ public class Registration {
 		
 		System.out.println(user);
 		
+		if(user.getUserName().isBlank()) {
+			
+			return "redirect:/Register";
+		}
+		
 		//pass the user data received from form to the service layer
 		
 		this.userService.createUser(user);  //this sends user data to createuser method of UserService class
 		
 		//can create a service layer for the logic 
-		return "Success";	
+		return "redirect:/Register";	
 		}
 }
